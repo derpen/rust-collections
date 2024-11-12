@@ -4,13 +4,17 @@ pub fn calculate(num_one: &str, num_two: &str, operator: &str) -> i64 {
 
     let answer;
 
-    match operator {
-        "+" => answer = num_one_int + num_two_int,
-        "-" => answer = num_one_int - num_two_int,
-        "*" => answer = num_one_int * num_two_int,
-        "/" => answer = num_one_int / num_two_int,
-        _ => return -1,
-    }
+    answer = match operator {
+        "+" => num_one_int + num_two_int,
+        "-" => num_one_int - num_two_int,
+        "*" => num_one_int * num_two_int,
+        "/" => num_one_int / num_two_int,
+        //_ => return -1,
+        _ =>  {
+            print!("ERROR----------Please input a valid operator (+ - * /)-----------------\n"); 
+            0
+        }
+    };
 
     return answer;
 }
