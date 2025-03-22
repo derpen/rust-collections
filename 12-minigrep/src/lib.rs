@@ -77,6 +77,11 @@ Trust me.";
     }
 }
 
+
+/// Search what you want to search
+///
+/// # Usage
+/// Idk, just look at it lol
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents
         .lines()
